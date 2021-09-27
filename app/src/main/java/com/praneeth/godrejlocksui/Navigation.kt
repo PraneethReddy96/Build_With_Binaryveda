@@ -25,21 +25,49 @@ import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 @Composable
 fun Navigation() {
     val navController = rememberNavController()
-    NavHost(navController, startDestination = Screen.HomeScreen.route) {
+   NavHost(navController, startDestination = Screen.HomeScreen.route) {
 
 
         composable(route = Screen.HomeScreen.route,
-        ){
-                HomeScreen(navController = navController)
+//            enterTransition = { _, _ ->
+//                slideInHorizontally(initialOffsetX = { it / 2 },
+//                    animationSpec = tween(500))
+//            },
+//            exitTransition = { _, _ ->
+//                slideOutHorizontally(targetOffsetX = { it / 2 },
+//                    animationSpec = tween(500)) }
+    ) {
+
+            HomeScreen(navController = navController)
         }
 
-        composable(route = Screen.LockActivity.route,
-        ){
+       composable(route = Screen.LockActivity.route,
+//            enterTransition = { _, _ ->
+//                slideInHorizontally(initialOffsetX = { it / 2 },
+//                    animationSpec = tween(500))
+//            },
+//            exitTransition = { _, _ ->
+//                slideOutHorizontally(targetOffsetX = { it / 2 },
+//                    animationSpec = tween(500)) }
+       )
+       {
+
             LockActivityScreen(navController = navController)
         }
 
     }
 }
+
+//        composable(route = Screen.HomeScreen.route,
+//        ){
+//                HomeScreen(navController = navController)
+//        }
+//
+//        composable(route = Screen.LockActivity.route,
+//        ){
+//            LockActivityScreen(navController = navController)
+//        }
+
 
 //
 //val navController = rememberAnimatedNavController()

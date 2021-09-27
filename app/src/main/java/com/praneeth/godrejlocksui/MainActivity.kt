@@ -62,8 +62,15 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun HomeScreen(navController: NavController) {
     HeaderIcons()
-    Welcome(modifier = Modifier)
+
+    @Composable
+    fun hyd(navController: NavController){
+
+    }
+
     CenterCard(navController = navController, modifier = Modifier)
+    Welcome(modifier = Modifier)
+
     BottomTabs(modifier = Modifier)
 }
 
@@ -304,7 +311,7 @@ fun HeaderIcons() {
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(20.dp, 24.dp, 24.dp, 0.dp)) {
+            .padding(22.dp, 24.dp, 24.dp, 0.dp)) {
 
         Icon(painter = painterResource(R.drawable.ic_hamburger),
             contentDescription = "Search",
