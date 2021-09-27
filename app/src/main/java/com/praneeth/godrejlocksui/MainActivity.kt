@@ -162,7 +162,7 @@ fun CenterCard(navController: NavController, modifier: Modifier) {
                         colors = listOf(
                             Color.Transparent,
                             Color.Black
-                        ), startY = 600f
+                        ), startY = 450f
 
                     )))
 
