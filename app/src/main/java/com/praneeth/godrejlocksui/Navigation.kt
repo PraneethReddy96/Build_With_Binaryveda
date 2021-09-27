@@ -7,8 +7,11 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.runtime.Composable
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.navigation.animation.AnimatedNavHost
-import com.google.accompanist.navigation.animation.composable
+//import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 
 
@@ -17,31 +20,31 @@ import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 @ExperimentalAnimationApi
 @Composable
 fun Navigation() {
-    val navController = rememberAnimatedNavController()
+    val navController = rememberNavController()
 
-    AnimatedNavHost(navController, startDestination = Screen.HomeScreen.route) {
+    NavHost(navController, startDestination = Screen.HomeScreen.route) {
 
         composable(route = Screen.HomeScreen.route,
-            enterTransition = { _, _ ->
-                slideInHorizontally(initialOffsetX = { it / 2 },
-                    animationSpec = tween(500))
-            },
-            exitTransition = { _, _ ->
-                slideOutHorizontally(targetOffsetX = { it / 2 },
-                    animationSpec = tween(500)) }
+//            enterTransition = { _, _ ->
+//                slideInHorizontally(initialOffsetX = { it / 2 },
+//                    animationSpec = tween(500))
+//            },
+//            exitTransition = { _, _ ->
+//                slideOutHorizontally(targetOffsetX = { it / 2 },
+//                    animationSpec = tween(500)) }
     ) {
 
             HomeScreen(navController = navController)
         }
 
        composable(route = Screen.LockActivity.route,
-            enterTransition = { _, _ ->
-                slideInHorizontally(initialOffsetX = { it / 2 },
-                    animationSpec = tween(500))
-            },
-            exitTransition = { _, _ ->
-                slideOutHorizontally(targetOffsetX = { it / 2 },
-                    animationSpec = tween(500)) }
+//            enterTransition = { _, _ ->
+//                slideInHorizontally(initialOffsetX = { it / 2 },
+//                    animationSpec = tween(500))
+//            },
+//            exitTransition = { _, _ ->
+//                slideOutHorizontally(targetOffsetX = { it / 2 },
+//                    animationSpec = tween(500)) }
        )
        {
 
