@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.praneeth.godrejlocksui">
+    package="com.praneeth.smartLockProject">
 
     <application
         android:allowBackup="true"
@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GodrejLocksUi">
         <activity
-            android:name=".LockActivity"
+            android:name="com.praneeth.smartLockProject.LockActivity"
             android:exported="true"
             android:label="@string/title_activity_lock"
             android:theme="@style/Theme.GodrejLocksUi.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.praneeth.smartLockProject.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.GodrejLocksUi.NoActionBar">

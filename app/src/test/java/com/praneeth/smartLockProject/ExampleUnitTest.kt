@@ -1,4 +1,4 @@
-package com.praneeth.godrejlocksui
+package com.praneeth.smartLockProject
 
 import org.junit.Test
 

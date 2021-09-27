@@ -1,4 +1,4 @@
-package com.praneeth.godrejlocksui.ui.theme
+package com.praneeth.smartLockProject.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,4 +1,4 @@
-package com.praneeth.godrejlocksui
+package com.praneeth.smartLockProject
 
 
 import android.os.Bundle
@@ -16,7 +16,6 @@ import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.Center
-import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -29,7 +28,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.praneeth.godrejlocksui.ui.theme.*
+import com.praneeth.smartLockProject.ui.theme.*
 
 
 class LockActivity : ComponentActivity() {
@@ -182,12 +181,13 @@ fun LockAnimationCard(modifier: Modifier) {
                     drawCircle(cream)
                 })
 
-                Canvas(modifier = Modifier.size(167.dp), onDraw = {
+                Canvas(modifier = Modifier.size(167.dp).clickable( indication = null,
+                    interactionSource = remember { MutableInteractionSource() }
+                ){lockBackgroundColor = !lockBackgroundColor }, onDraw = {
                     drawCircle(colorState)
                 })
 
-                IconButton(modifier = Modifier.size(93.dp),
-                    onClick = { lockBackgroundColor = !lockBackgroundColor }) {
+
                     Icon(
                         painter = painterResource(id = if (lockBackgroundColor) R.drawable.ic_locked else R.drawable.ic_unlocked),
                         modifier = Modifier.size(93.dp),
@@ -195,7 +195,7 @@ fun LockAnimationCard(modifier: Modifier) {
                         tint = Color.White,
                         )
                 }
-            }
+
             Surface(modifier = Modifier
                 .height(120.dp)
                 .fillMaxWidth()) {
@@ -301,7 +301,7 @@ fun Headers(navController: NavController) {
 
     Column(modifier = Modifier.padding(24.dp, 100.dp, 0.dp, 0.dp)) {
 
-        Text("A-201 (YourSpace)",
+        Text("My Studio Apartment",
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             fontFamily = FontFamily(Font(R.font.firasans_semibold)),
