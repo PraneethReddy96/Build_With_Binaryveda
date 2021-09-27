@@ -43,7 +43,6 @@ import com.praneeth.godrejlocksui.ui.theme.*
 class MainActivity : ComponentActivity() {
 
     @ExperimentalAnimationApi
-    @ExperimentalMaterialApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -58,15 +57,10 @@ class MainActivity : ComponentActivity() {
 }
 
 
-@ExperimentalMaterialApi
+
 @Composable
 fun HomeScreen(navController: NavController) {
     HeaderIcons()
-
-    @Composable
-    fun hyd(navController: NavController){
-
-    }
 
     CenterCard(navController = navController, modifier = Modifier)
     Welcome(modifier = Modifier)
@@ -74,7 +68,7 @@ fun HomeScreen(navController: NavController) {
     BottomTabs(modifier = Modifier)
 }
 
-@ExperimentalMaterialApi
+
 @Composable
 fun BottomTabs(modifier: Modifier) {
 
@@ -133,7 +127,7 @@ fun BottomTabs(modifier: Modifier) {
     }
 }
 
-@ExperimentalMaterialApi
+
 @Composable
 fun CenterCard(navController: NavController, modifier: Modifier) {
 
@@ -336,7 +330,6 @@ fun HeaderIcons() {
 
 
 @ExperimentalAnimationApi
-@ExperimentalMaterialApi
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {

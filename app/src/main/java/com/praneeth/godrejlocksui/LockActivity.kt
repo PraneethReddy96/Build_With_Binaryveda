@@ -33,7 +33,7 @@ import com.praneeth.godrejlocksui.ui.theme.*
 
 
 class LockActivity : ComponentActivity() {
-    @ExperimentalMaterialApi
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -49,7 +49,6 @@ class LockActivity : ComponentActivity() {
 
 //this@LockActivity
 //context: Context
-@ExperimentalMaterialApi
 @Composable
 fun LockActivityScreen(navController: NavController) {
     Headers(navController=navController)
@@ -149,7 +148,7 @@ fun FooterIcons() {
 }
 
 
-@ExperimentalMaterialApi
+
 @Composable
 fun LockAnimationCard(modifier: Modifier) {
 
