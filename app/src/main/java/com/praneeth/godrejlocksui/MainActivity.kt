@@ -245,29 +245,36 @@ fun ProgressBar() {
     Row(horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier.padding(162.dp, 533.dp, 0.dp, 0.dp)) {
-        Box(modifier = Modifier
-            .height(5.dp)
-            .width(16.dp)
-            .background(blue)
-            .clip(RoundedCornerShape(180.dp)))
-        Box(modifier = Modifier
-            .height(5.dp)
-            .width(6.dp)
-            .background(Color.White))
-        Box(modifier = Modifier
-            .height(5.dp)
-            .width(5.dp)
-            .background(lightGrey)
-            .clip(CircleShape))
+
+        Row(horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier
+                .height(5.dp)
+                .width(16.dp)
+                .clip(RoundedCornerShape(100.dp))
+                .background(color = blue)) {}
         Box(modifier = Modifier
             .height(5.dp)
             .width(6.dp)
             .background(Color.White))
+        Row(horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier
+                .height(5.dp)
+                .width(5.dp)
+                .clip(RoundedCornerShape(180.dp))
+                .background(lightGrey)) {}
         Box(modifier = Modifier
             .height(5.dp)
-            .width(5.dp)
-            .background(lightGrey)
-            .clip(CircleShape))
+            .width(6.dp)
+            .background(Color.White))
+        Row(horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier
+                .height(5.dp)
+                .width(5.dp)
+                .clip(RoundedCornerShape(180.dp))
+                .background(lightGrey)) {}
 
     }
 }
